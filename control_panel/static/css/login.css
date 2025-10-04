@@ -1,0 +1,55 @@
+.parent_c{
+    margin-top: 0%;
+    margin-right: 0%;
+    justify-items: center;
+
+}
+.lc{
+    border: 1px solid black;
+    padding: 20px;
+    position: relative;
+    width: 300px;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    text-align: center;
+    
+
+}
+
+#inputfield{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid silver;
+    border-radius: 5px;
+    outline: none; 
+    box-sizing: border-box;
+}
+label{
+    display: block;
+    margin-top: 20px;
+    text-align: left;
+}
+#btn{
+    width: 100%;
+    padding: 10px;
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#btn:hover{
+    background-color: rgb(49, 90, 92);
+    
+}
+
+.forgot{
+    text-decoration: none;
+    color: cadetblue;
+    font-size: 14px;
+    float: right;
+    padding: 10px 10px 0px 10px;
+}
+

@@ -1,60 +1,19 @@
+{% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Home Page</title>
 </head>
-<style>
-    ul {
-        display: inline;
-
-    }
-    ul li{
-        display: inline;
-        color: white;
-        padding-left: 10px;
-    }
-    .menu{
-        padding: 20px;
-        background-color: green;
-        
-    }
-    ul li a{
-        color: white;
-        text-decoration: none;
-    }
-    ul li a:hover{
-        color: black;
-        font-weight: bold;
-    }
-    body{
-        margin: 0px;
-    }
-    .support{
-        float: right;
-    }
-    .welcome{
-        text-align: center;
-    }
-</style>
 <body>
-    <div class="menu" >
-         <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-        <li class="support" ><a href="">Customer Support</a></li>
-    </ul>
-
-    </div>
-
-
+    {% block content %}
     <div>
-        <h1 class="welcome" >Welcome to cotrol panel</h1>
+        <h1 class="welcome" >Welcome to control panel</h1>
+        
     </div>
-   
-    
+
+    {% endblock content %}
 </body>
 </html>

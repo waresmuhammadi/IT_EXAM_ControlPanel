@@ -1,11 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
+
 <body>
-    <h1>Welcome to Login Page</h1>
+<div class="parent_c" >
+    <div class="lc" >
+        <img src="{% static 'img/images.png' %}" width="80px"  alt="dashboard logo">
+        <h5>Please login with your username and password!</h5>
+        <hr>
+        <form action="login_auth/" method="POST" id="lform" >
+            {% csrf_token %}
+            <div class="input" >
+                <label for="">Username</label>
+                <input type="text" name="Username" id="inputfield"  placeholder="Username / Email" required>
+            </div>
+            
+            <div class="input" >
+                <label for="">Password</label>
+                <input type="password" name="Password" id="inputfield" placeholder="*********" required>
+            </div>
+            <a href="/forgot_password" class="forgot" >Forgot password</a>
+            
+            <br><br>
+            <input type="submit" value="Login" id="btn" >
+
+        </form>
+    </div>
+</div>  
 </body>
 </html>

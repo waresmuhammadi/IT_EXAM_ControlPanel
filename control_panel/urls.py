@@ -4,7 +4,9 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",views.home, name="Home Page"),
-    path("login/", views.login, name="Login Page"),
-]
+    path("", views.login, name="Login Page"),
+    path("dashboard/", views.home, name="Dashboard Page after login"),
+    path("authentication/", views.authentication, name="Authentication API for TEAM application"),
+    path("login_auth/", views.login_auth, name="login form submit")
 
+]

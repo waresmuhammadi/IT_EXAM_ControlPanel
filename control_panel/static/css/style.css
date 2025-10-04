@@ -1,0 +1,38 @@
+    ul {
+        display: inline;
+
+    }
+    ul li{
+        display: inline;
+        color: white;
+        padding-left: 10px;
+    }
+    .menu{
+        padding: 20px;
+        background-color: green;
+        
+    }
+    ul li a{
+        color: white;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: black;
+        font-weight: bold;
+    }
+    body{
+        margin: 0px;
+    }
+    .support{
+        float: right;
+    }
+    .welcome{
+        text-align: center;
+    }
+
+    .footer{
+        text-align: center;
+        padding: 2px;
+        background-color: black;
+        color: white;
+    }
