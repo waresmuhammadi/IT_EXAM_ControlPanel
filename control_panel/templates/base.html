@@ -1,30 +1,60 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    
-     <div class="menu" >
-         <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-        <li class="support" ><a href="">Customer Support</a></li>
-    </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    </div>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'icons/css/all.min.css' %}" />
 
-    {% block content %} 
-    
-    {% endblock content %}
-    
-    <div class="footer" >
-        <h5>@copy right 2025</h5>
+    {% block extra_css %} {% endblock extra_css %} {% block page_title %}
+    {%endblock page_title %}
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo_t">
+        <h5>IT_Exam</h5>
+      </div>
+
+      <ul class="nav-links">
+        <li class="active">
+          <a href="{% url 'Dashboard Page after login' %}"
+            ><i class="fas fa-gauge-high"></i> Dashboard</a
+          >
+        </li>
+        <li class="">
+          <a href="{% url 'Team page' %}"><i class="fas fa-users"></i> Teams</a>
+        </li>
+        <li>
+          <a href="{% url 'Chat page' %}"
+            ><i class="fas fa-comments"></i> Chat</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'Upload page' %}"
+            ><i class="fas fa-file-arrow-up"></i>Upload</a
+          >
+        </li>
+        <li>
+          <a href="/"><i class="fas fa-sign-out-alt"></i>Log out</a>
+        </li>
+      </ul>
     </div>
-</body>
+    <div class="main-content">
+      <header>
+        <button id="toggle-btn"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+          <img
+            src="{% static 'img/images.png' %}"
+            width="80px"
+            alt="dashboard logo"
+          />
+        </div>
+      </header>
+      {% block content %} {% endblock content %}
+    </div>
+    {% block extra_js %} {% endblock extra_js %}
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
 </html>

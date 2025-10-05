@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/chat.css' %}" />
+{% endblock extra_css %} {% block page_title %}
+<title>Chat</title>
+{% endblock page_title %} {% block content %}
+<section class="content">
+  <div class="chat-container">
+    <div class="chat-messages" id="chat-messages">
+      <div class="message received">
+        <p>Hello! Welcome to the chat.</p>
+        <span class="time">09:00 AM</span>
+      </div>
+      <div class="message sent">
+        <p>Hi! How’s everything?</p>
+        <span class="time">09:01 AM</span>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="message-input" placeholder="Type a message..." />
+      <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+</section>
+{% endblock content %} {% block extra_js %}
+<script src="{% static 'js/chat.js' %}"></script>
+{% endblock extra_js %}

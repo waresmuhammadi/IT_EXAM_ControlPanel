@@ -1,55 +1,74 @@
-.parent_c{
-    margin-top: 0%;
-    margin-right: 0%;
-    justify-items: center;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.lc{
-    border: 1px solid black;
-    padding: 20px;
-    position: relative;
-    width: 300px;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    text-align: center;
-    
-
+.parent_c {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
-
-#inputfield{
-    padding: 10px;
-    width: 100%;
-    border: 1px solid silver;
-    border-radius: 5px;
-    outline: none; 
-    box-sizing: border-box;
-}
-label{
-    display: block;
-    margin-top: 20px;
-    text-align: left;
-}
-#btn{
-    width: 100%;
-    padding: 10px;
-    background-color: cadetblue;
-    color: white;
-    border: none;
-    border-radius: 16px;
-    cursor: pointer;
-    margin-top: 20px;
+.lc {
+  border: 1px solid black;
+  padding: 20px;
+  width: 350px;
+  height: 450px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  box-shadow: 0px 2px 15px #2d2d2d;
 }
 
-#btn:hover{
-    background-color: rgb(49, 90, 92);
-    
+#inputfield {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid silver;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+label {
+  display: block;
+  margin-top: 20px;
+  text-align: left;
+}
+#btn {
+  width: 100%;
+  padding: 10px;
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.2s ease;
 }
 
-.forgot{
-    text-decoration: none;
-    color: cadetblue;
-    font-size: 14px;
-    float: right;
-    padding: 10px 10px 0px 10px;
+#btn:hover {
+  background-color: rgb(49, 90, 92);
 }
 
+.forgot {
+  text-decoration: none;
+  color: cadetblue;
+  font-size: 14px;
+  float: right;
+  padding: 10px 10px 0px 10px;
+  transition: all 0.2s ease;
+}
+.forgot:hover {
+  text-decoration: underline;
+  color: rgb(59, 100, 102);
+}
+.login_title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+hr {
+  width: 280px;
+  margin: auto;
+}
