@@ -16,6 +16,7 @@
           <th>Score</th>
           <th>Created</th>
           <th>Status</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -25,38 +26,77 @@
           <td>{{ team.name }}</td>
           <td>{{ team.username }}</td>
           <td>{{ team.total_score }}</td>
-          <td>{{ team.created_at }}</td>   
-          <td><span class="status login">{{ team.is_login }}</span></td>
+          <td>{{ team.created_at|date:"Y-m-d H:i" }}</td>
+          <td>
+            <span
+              class="status {% if team.is_login %}login{% else %}logout{% endif %}"
+            >
+              {% if team.is_login %}Login{% else %}Logout{% endif %}
+            </span>
+          </td>
+          <td>
+            <a href="#" class="user_delete btn" title="Delete Team">
+              <i class="fas fa-trash"></i>
+            </a>
+          </td>
         </tr>
         {% endfor %}
-    
       </tbody>
     </table>
 
+    <!-- Modal for adding new team -->
     <div class="modal" id="team-modal">
       <div class="modal-content">
         <span class="close-btn">&times;</span>
         <h3>Add New Team</h3>
         <form id="add-team-form">
-          <label>Team Name</label>
+          <label for="team-name">Team Name</label>
           <input
             type="text"
             id="team-name"
+            name="name"
             placeholder="Enter team name"
             required
           />
-          <label>Status</label>
-          <select id="team-status" required>
-            <option value="login">Login</option>
-            <option value="logout">Logout</option>
+
+          <label for="team-username">Username</label>
+          <input
+            type="text"
+            id="team-username"
+            name="username"
+            placeholder="Enter username"
+            required
+          />
+
+          <label for="team-password">Password</label>
+          <input
+            type="password"
+            id="team-password"
+            name="password"
+            placeholder="Enter password"
+            required
+          />
+
+          <label for="team-members">Members (JSON)</label>
+          <textarea
+            id="team-members"
+            name="members"
+            placeholder='["member1", "member2"]'
+            rows="3"
+          ></textarea>
+
+          <label for="team-status">Status</label>
+          <select id="team-status" name="is_login" required>
+            <option value="True">Login</option>
+            <option value="False">Logout</option>
           </select>
+
           <button type="submit">Add Team</button>
         </form>
       </div>
     </div>
   </div>
 </section>
-
 {% endblock content %} {% block extra_js %}
 <script src="{% static 'js/team.js' %}"></script>
 {% endblock extra_js %}

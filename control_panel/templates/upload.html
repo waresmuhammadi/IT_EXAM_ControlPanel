@@ -1,24 +1,28 @@
 {% extends 'base.html' %} {% load static %} {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/upload.css' %}" />
 {% endblock extra_css %} {% block page_title %}
-<title>Upload</title>
+<title>Uploaded Files</title>
 {% endblock page_title %} {% block content %}
 <section class="content">
   <div class="form-container">
-    <h2>Upload File</h2>
-    <form id="upload-form">
-      <label for="file-option">Choose an Option</label>
-      <select id="file-option" required>
-        <option value="">Select The Question</option>
-        <option value="option1">Question A</option>
-        <option value="option2">Question B</option>
-        <option value="option3">Question C</option>
-      </select>
-      <label for="file-input">Select File</label>
-      <input type="file" id="file-input" accept="*/*" required />
-      <button type="submit">Upload</button>
-    </form>
-    <div id="preview-container"></div>
+    <h2>Uploaded Files</h2>
+    <div class="uploads-table-container">
+      <table id="uploads-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Team Name</th>
+            <th>Uploaded At</th>
+            <th>Question</th>
+            <th>File</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Uploaded files will be rendered here -->
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 {% endblock content %} {% block extra_js %}
