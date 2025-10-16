@@ -1,3 +1,5 @@
+@import url("variables.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +40,7 @@ label {
 #btn {
   width: 100%;
   padding: 10px;
-  background-color: cadetblue;
+  background-color: var(--color-primary-dark);
   color: white;
   border: none;
   border-radius: 16px;
@@ -48,12 +50,12 @@ label {
 }
 
 #btn:hover {
-  background-color: rgb(49, 90, 92);
+  background-color: var(--color-primary-light);
 }
 
 .forgot {
   text-decoration: none;
-  color: cadetblue;
+  color: var(--color-primary-dark);
   font-size: 14px;
   float: right;
   padding: 10px 10px 0px 10px;
@@ -61,7 +63,7 @@ label {
 }
 .forgot:hover {
   text-decoration: underline;
-  color: rgb(59, 100, 102);
+  color: var(--color-primary-light);
 }
 .login_title {
   font-size: 20px;

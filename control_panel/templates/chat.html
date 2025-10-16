@@ -4,21 +4,35 @@
 <title>Chat</title>
 {% endblock page_title %} {% block content %}
 <section class="content">
-  <div class="chat-container">
-    <div class="chat-messages" id="chat-messages">
-      <div class="message received">
-        <p>Hello! Welcome to the chat.</p>
-        <span class="time">09:00 AM</span>
+  <div class="chat-wrapper">
+    <!-- Contacts List -->
+    <div class="contacts-list">
+      <h4 class="contact_heading">Teams</h4>
+      <div class="contact" data-id="contact1">
+        <i class="fa-solid fa-message"></i>
+        <span class="contact-name">Team1</span>
+        <span class="unread-badge" style="display: none"></span>
       </div>
-      <div class="message sent">
-        <p>Hi! How’s everything?</p>
-        <span class="time">09:01 AM</span>
+      <div class="contact" data-id="contact2">
+        <i class="fa-solid fa-message"></i>
+        <span class="contact-name">Team2</span>
+        <span class="unread-badge">1</span>
+      </div>
+      <div class="contact" data-id="contact3">
+        <i class="fa-solid fa-message"></i>
+        <span class="contact-name">Team3</span>
+        <span class="unread-badge">6</span>
       </div>
     </div>
 
-    <div class="chat-input">
-      <input type="text" id="message-input" placeholder="Type a message..." />
-      <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+    <!-- Chat Box -->
+    <div class="chat-container">
+      <div class="chat-messages" id="chat-messages"></div>
+
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Type a message..." />
+        <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+      </div>
     </div>
   </div>
 </section>

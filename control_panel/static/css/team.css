@@ -1,7 +1,9 @@
+@import url("variables.css");
+
 /* ==================== TEAM TABLE STYLES ==================== */
 
 .table-container {
-  background: #fff;
+  background: var(--color-white);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -15,8 +17,8 @@
 }
 
 .team-table thead {
-  background-color: #ABC337;
-  color: #fff;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -29,21 +31,21 @@
 }
 
 .team-table tbody tr:nth-child(odd) {
-  background-color: #f9f9f9;
+  background-color: var(--color-table-row-odd);
 }
 
 .team-table tbody tr:nth-child(even) {
-  background-color: #ffffff;
+  background-color: var(--color-table-row-even);
 }
 
 .team-table tbody tr:hover {
-  background-color: #f1f7f9;
+  background-color: var(--color-table-row-hover);
   transition: 0.2s;
 }
 
 .team-table td:first-child {
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--color-dark-gray);
   width: 50px;
 }
 
@@ -51,32 +53,23 @@
   display: inline-block;
   padding: 4px 9px;
   border-radius: 3px;
-  font-size: 0.9em;
-  /* font-weight: bold; */
-  /* text-transform: uppercase; */
   font-size: 13px;
 }
 
 .status.login {
-  background-color: #ABC337;
-  color: #fff;
+  background-color: var(--color-success);
+  color: var(--color-white);
 }
 
 .status.logout {
-  background-color: #e74c3c;
-  color: #fff;
-}
-
-.content h2 {
-  margin-bottom: 15px;
-  color: #2c3e50;
-  font-weight: bold;
+  background-color: var(--color-error);
+  color: var(--color-white);
 }
 
 /* ==================== ADD TEAM BUTTON ==================== */
 .add-team-btn {
-  background: #ABC337;
-  color: #fff;
+  background: var(--color-primary-dark);
+  color: var(--color-white);
   border: none;
   padding: 9px 11px;
   border-radius: 4px;
@@ -91,7 +84,7 @@
 }
 
 .add-team-btn:hover {
-  background: #ABC337;
+  background: var(--color-primary-light);
 }
 
 /* ==================== MODAL FORM ==================== */
@@ -118,7 +111,7 @@
 }
 
 .modal-content {
-  background: #fff;
+  background: var(--color-white);
   padding: 25px 30px;
   border-radius: 12px;
   width: 400px;
@@ -142,12 +135,12 @@
   right: 15px;
   font-size: 1.5em;
   cursor: pointer;
-  color: #333;
+  color: var(--color-dark-gray);
 }
 
 .modal-content h3 {
   margin-bottom: 20px;
-  color: #ABC337;
+  color: var(--color-primary-dark);
 }
 
 #add-team-form label {
@@ -169,9 +162,9 @@
 #add-team-form button {
   width: 100%;
   padding: 10px;
-  background: #ABC337;
+  background: var(--color-primary-dark);
   border: none;
-  color: #fff;
+  color: var(--color-white);
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
@@ -179,5 +172,43 @@
 }
 
 #add-team-form button:hover {
-  background: #ABC337;
+  background: var(--color-primary-light);
+}
+
+.btn {
+  /* padding: 3px 5px; */
+  /* border: 2px solid var(--color-primary-dark); */
+  border-radius: 3px;
+  color: var(--color-black);
+  margin-right: 5px;
+  text-decoration: none;
+
+  font-size: 25px;
+}
+
+.user_delete {
+  color: red;
+  /* font-size: 20px; */
+}
+.user_update {
+  color: green;
+  /* font-size: 20px; */
+}
+
+#add-team-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  resize: none;
+  font-family: var(--font-main);
+}
+
+#add-team-form textarea:focus,
+#add-team-form input:focus,
+#add-team-form select:focus {
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 0 4px var(--color-primary-light);
 }

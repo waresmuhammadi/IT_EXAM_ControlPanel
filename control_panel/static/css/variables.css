@@ -1,0 +1,21 @@
+:root {
+  /* ==================== COLORS ==================== */
+  --color-primary: #abc337; /* رنگ اصلی پروژه */
+  --color-primary-dark: #92a729; /* حالت تیره برای hover */
+  --color-primary-light: #afc446; /* حالت روشن‌تر */
+
+  --color-white: #fff;
+  --color-light-gray: #f5f7fa;
+  --color-gray: #ecf0f1;
+  --color-dark-gray: #2c3e50;
+  --color-dark-gray-light: #34485d;
+  --color-black: #333;
+
+  --color-success: #2ecc71;
+  --color-error: #e74c3c;
+
+  --color-table-header: var(--color-primary);
+  --color-table-row-odd: #f9f9f9;
+  --color-table-row-even: #ffffff;
+  --color-table-row-hover: #f1f7f9;
+}
